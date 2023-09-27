@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ashley Chen | Monthly Book Exchange Form</title>
+<style>
+	.form-row {
+		margin: 20px 0px;
+	}
+	.main-label {
+		width: 25%;
+		float: left;
+	}
+	#questions-comments-concerns {
+		width: 30%;
+	}
+	button {
+		padding: 10px 20px;
+	}
+	#submit {
+		background-color: purple;
+		color: white;
+	}
+</style>
+<body>
+	<h1>Monthly Book Exchange Form</h1>
+	<form action="confirmation.html">
+		<div class="form-row">
+		<label class="main-label" for="name">Name:</label>
+			<input id="name" type="text" placeholder="Full name">
+		</div>
+
+		<div class="form-row">
+		<label class="main-label" for="email">Email:</label>
+			<input id="email" type="text">
+		</div>
+
+		<div class="form-row">
+		<label class="main-label" for="phone">Phone Number:</label>
+			<input id="phone" type="text">
+		</div>
+
+		<div class="form-row">
+		<label class="main-label" for="address">Address Line 1:</label>
+			<input id="address" for="address" type="text" placeholder="Street Address">
+		</div>
+
+		<div class="form-row">
+		<label class="main-label" for="address">Address 2:</label>
+			<input id="address 2" for="address" type="text" placeholder="Apt, suite, unit, building, etc.">
+		</div>
+
+		<div class="form-row">
+		<label class="main-label" for="address">City:</label>
+			<input id="city" for="address" type="text">
+		</div>
+
+		<div class="form-row">
+		<label class="main-label" for="address">State/Province/Region:</label>
+			<input id="state" for="address" type="text">
+		</div>
+		
+		<div class="form-row">
+		<label class="main-label" for="address">Zip/Postal Code:</label>
+			<input id="code" for="address" type="text">
+		</div>
+
+		<div class="form-row">
+		<label class="main-label" for="address">Country</label>
+			<input id="country" for="address" type="text">
+		</div>
+
+		<div class="form-row">
+		<label class="main-label" for="grade">How many books will you read this month?</label>
+			<select id="grade-option">
+				<option value="one">1</option>
+				<option value="two">2</option>
+				<option value="three">3</option>
+				<option value="four">4</option>
+				<option value="five">5</option>
+				<option value="six">6</option>
+				<option value="seven">7</option>
+				<option value="eight">8</option>
+				<option value="nine">9</option>
+				<option value="ten">10</option>
+			</select>
+		</div>
+
+		<div class="form-row">
+		<label class="main-label">Annotations?</label>
+			<label for="yes">
+				<input id="yes" type="radio" name="annotations" value="yes">Yes
+			</label>
+			<label for="no">
+				<input id="no" type="radio" name="annotations" value="no">No
+			</label>
+			<label for="nopreference">
+				<input id="nopreference" type="radio" name="annotations" value="nopreference">No Preference
+			</label>
+		</div>
+
+		<div class="form-row">
+		<label class="main-label">Genres:</label>
+			<label for="nonfiction">
+				<input id="nonfiction" type="checkbox" name="genre" value="nonfiction">Nonfiction
+			</label>
+			<label for="contemporary">
+				<input id="contemporary" type="checkbox" name="genre" value="contemporary">Contemporary Fiction
+			</label>
+			<label for="action">
+				<input id="action" type="checkbox" name="genre" value="action">Action/Adventure
+			</label>
+			<label for="fantasy">
+				<input id="fantasy" type="checkbox" name="genre" value="fantasy">Fantasy/Sci-Fi
+			</label>
+			<label for="historial">
+				<input id="historical" type="checkbox" name="genre" value="historical">Historical
+			</label>
+			<label for="horror">
+				<input id="horror" type="checkbox" name="genre" value="horror">Horror/Thriller
+			</label>
+			<label for="mystery">
+				<input id="mystery" type="checkbox" name="genre" value="mystery">Mystery/Crime
+			</label>
+			<label for="romance">
+				<input id="romance" type="checkbox" name="genre" value="romance">Romance/Drama
+			</label>
+		</div>
+
+		<div class="form-row">
+		<label class="main-label" for="questions-comments-concerns">Questions, comments, concerns?</label>
+			<textarea id="questions-comments-concerns" placeholder="Type Here"></textarea>
+		</div>
+
+		<div class="form-row">
+		<label for="termsandconditions">
+			<input id="agree" type="checkbox" name="termsandconditions" value="agree">I accept the terms and conditions
+		</label>
+		</div>
+
+		<div class="form-row">
+		<button id="submit" type="submit">Submit!</button>
+		<button id="reset" type="reset">Clear</button>
+		</div>
+	</form>
+</body>
+</head>
+</html>

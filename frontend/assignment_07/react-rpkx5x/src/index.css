@@ -1,0 +1,35 @@
+#header {
+  text-align: center;
+  background-color: lightgreen;
+  background-size: cover;
+  color: white;
+  padding: 10px;
+  width: 100%;
+}
+#content {
+  margin-top: 100px;
+  text-align: center;
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.products {
+  float: left;
+}
+.productimg {
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+}
+#count {
+  padding: 10px;
+}
+#footer {
+  background-color: lightgrey;
+  text-align: center;
+  padding: 1px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}

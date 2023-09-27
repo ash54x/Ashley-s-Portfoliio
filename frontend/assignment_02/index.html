@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ashley Chen | Shopping Cart</title>
+<style>
+
+	
+	#header {
+		margin-left:auto;
+		margin-right:auto;
+		text-align:center;
+		background-color:purple;
+		color:white;
+		padding:10px;
+
+	}
+	img {
+		height:200px;
+
+	}
+	.product {
+		float:left;
+		text-align:center;
+		padding-left:60px;
+		padding-top:100px;
+
+	}
+	.product:hover {
+		opacity:0.5;
+
+	}
+	#content {
+		width:1000px;
+		margin-right:auto;
+		margin-left:auto;
+		margin-left:210px;
+	}
+	#subtotal {
+		float:left;
+		margin-top:50px;
+	}
+	#footer {
+		background-color: #404040;
+		color: white;
+		text-align: center;
+		padding: 1px;
+		width: 100%;
+		position:fixed;
+		bottom:0;
+	}
+
+</style>
+</head>
+<body>
+
+<div id="header">
+	<h1>My Cart</h1>
+</div>
+
+<div id="content">
+	<div class="product">
+		<div id="iphone">
+			<img src="images/iphone.jpeg" alt="iPhone">
+			<p>Dark Purple iPhone 14 Pro Max</p>
+			<p>$<span id="phone">1099</span></p>
+		</div>
+	</div>
+	<div class="clearfloat"></div>
+	<div class="product">
+		<div id="casetify">
+			<img src="images/case.jpg" alt="Case">
+			<p>Cotton Candy Clouds Case for iPhone 14 Pro Max</p>
+			<p>$<span id="clouds">72</span></p>
+		</div>
+	</div>
+	<div class="clearfloat"></div>
+	<div class="product">
+		<div id="socket">
+			<img src="images/popsocket.jpeg" alt="Popsocket">
+			<p>Black Pop Socket</p>
+			<p>$<span id="popsocket">10</span></p>
+		</div>
+	</div>
+	<div class="clearfloat"></div>
+
+	<h2 id="subtotal"><strong>Cart Subtotal: $<span id="total">0</span></strong></h2>
+</div>
+
+<div id="footer">
+	<p>&copy; 2023 University of Southern California</p>
+</div>
+
+<script>
+
+	// 1. Get price of each product
+	// 2. Note total price on page
+	// 3. Add price of product and total price together to get new total
+	// 4. Update the total price on the page to the new total
+
+
+	document.querySelector('#iphone').onclick=function(){
+		phone = document.querySelector('#phone').innerHTML;
+		console.log(phone);
+		total = document.querySelector('#total').innerHTML;
+		console.log(total);
+		newtotal = parseInt(phone) + parseInt(total);
+		console.log(newtotal);
+		document.querySelector('#total').innerHTML = newtotal;
+	}
+
+	document.querySelector('#casetify').onclick=function(){
+		clouds = document.querySelector('#clouds').innerHTML;
+		console.log(clouds);
+		total = document.querySelector('#total').innerHTML;
+		console.log(total);
+		newtotal = parseInt(clouds) + parseInt(total);
+		console.log(newtotal);
+		document.querySelector('#total').innerHTML = newtotal;
+	}
+
+	document.querySelector('#socket').onclick=function(){
+		pop = document.querySelector('#popsocket').innerHTML;
+		console.log(pop);
+		total = document.querySelector('#total').innerHTML;
+		console.log(total);
+		newtotal = parseInt(pop) + parseInt(total);
+		console.log(newtotal);
+		document.querySelector('#total').innerHTML = newtotal;
+	}
+
+
+
+</script>
+
+
+</body>
+</html>

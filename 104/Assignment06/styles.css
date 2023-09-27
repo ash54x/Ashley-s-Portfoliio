@@ -1,0 +1,116 @@
+	#header {
+		background-image: url("images/freakymovie.jpg");
+		height: 600px;
+		background-size: cover;
+
+	}
+	h1 {
+		text-align: center;
+		color:  #ff4d4d;
+		font-size: 90px;
+		text-shadow: 5px 5px 0px #660000;
+		font-family: Spookyman;
+	}
+	#everything {
+		width: 900px;
+		margin-right: auto;
+		margin-left: auto;
+		background-color: white;
+	}
+	.content {
+		background-color: white;
+		width: 600px;
+		float: left;
+		padding: 20px;
+		line-height: 21px;
+	}
+	.sidebar {
+		width: 250px;
+		text-align: center;
+		background-color: #cc9900;
+		float: left;
+	}
+	.clearfloat {
+		clear: both;
+	}
+	body {
+		background-color: #1a0000;
+		text-align: justify;
+	}
+	h2 {
+		color: #ff4d4d;
+		text-align: center;
+		font-family: 'Antic Slab', serif;
+	}
+	img {
+		width: 200px;
+		height: auto;
+		margin: 15px;
+	}
+	#footer {
+		background-size: cover;
+		background-color: #ff4d4d;
+		text-align: center;
+		padding: 1px;
+	}
+
+	#nav {
+		width: 900px;
+		margin: 0 auto;
+		background-color: #ff4d4d;
+
+	}
+	#nav a {
+		width: 448px;
+		height: 50px;
+		display: inline-block;
+		text-align: center;
+		line-height: 50px;
+		color: black;
+		text-decoration: none;
+		font-size: 20px;
+		clear: both;
+	}
+	#nav a:hover {
+		background-color: #660000;
+		color: white;
+	}
+
+	#nav .active {
+		background-color: #660000;
+		color: white;
+	}
+
+	#nav-wrapper {
+		background-color: #ff4d4d;
+		height: 50px;
+
+	}
+	@font-face {
+		font-family: "Spookyman";
+		src: url(fonts/Spookyman.otf);
+	}
+	#nav ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	#nav li {
+		width: 450px;
+		float: left;
+		line-height: 50px;
+		text-align: center;
+		background-color: #ff4d4d;
+		position: relative;
+		z-index: 1;
+	}
+	#nav li:hover {
+		background-color: #660000;
+	}
+	#nav ul ul {
+		visibility: hidden;
+		position: absolute;
+	}
+	#nav li:hover > ul {
+		visibility: visible;
+	}

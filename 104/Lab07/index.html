@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Image Puzzle | Ashley Chen</title>
+<style>
+	body {
+		width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: #4d2600;
+	}
+	h1 {
+		text-align: center;
+		color: white;
+		text-shadow: 5px 5px black;
+	}
+	.puzzlepieces {
+		width: 700px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	img {
+		border: solid white 1px;
+	}
+	.row3 {
+		float: left;
+		position: relative;
+	}
+	.row2 {
+		float: left;
+	}
+	.row1 {
+		float: left;
+	}
+	.clearfloat {
+		clear: both;
+	}
+	#relative1 {
+		position: relative;
+		left: 20px;
+		top: 10px;
+		float: left;
+		box-shadow: 5px 10px 10px;
+	}
+	#relative2 {
+		position: relative;
+		left: 20px;
+		bottom: 20px;
+		float: right;
+		box-shadow: 5px 10px 10px;
+	}
+</style>
+</head>
+<body>
+	<h1>Cityscape Puzzle</h1>
+	<div class="puzzlepieces">
+		<div class="row1">
+			<div id="relative1"><img src="images/row-1-column-1.jpg" alt="puzzle9"></div>
+			<img src="images/row-1-column-2.jpg" alt="puzzle8">
+			<img src="images/row-1-column-3.jpg" alt="puzzle7">
+		</div>
+		<div class="row2">
+			<img src="images/row-2-column-1.jpg" alt="puzzle6">
+			<img src="images/row-2-column-2.jpg" alt="puzzle5">
+			<div id="relative2"><img src="images/row-2-column-3.jpg" alt="puzzle4"></div>
+		</div>
+		<div class="row3">
+			<img src="images/row-3-column-1.jpg" alt="puzzle3">
+			<img src="images/row-3-column-2.jpg" alt="puzzle2">
+			<img src="images/row-3-column-3.jpg" alt="puzzle1">
+		</div>
+	</div>
+	<div class="clearfloat"></div>
+</body>
+</html>

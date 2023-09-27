@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ashley Chen | Photo Gallery</title>
+<style>
+	body {
+		width:1200px;
+		margin-left:auto;
+		margin-right:auto;
+		text-align:center;
+		background-color:#006699;
+		color:white;
+	}
+	
+	.interest {
+		float:left;
+		height:200px;
+		width:250px;
+		border:2px solid white;
+		padding:20px;
+	}
+	#gallery {
+		padding:10px;
+	}
+
+	#thumbnail {
+		width:700px;
+		height:auto;
+		border:2px solid white;
+		padding:20px;
+		margin-right:auto;
+		margin-left:auto;
+	}
+
+	#main {
+		width:700px;
+		margin-right:auto;
+		margin-left:auto;
+	}
+
+	#caption {
+ 		display: block;
+	}
+
+
+</style>
+</head>
+<body>
+
+	<h1> Ashley's Photo Gallery</h1>
+	<div id="gallery">
+		<div class="pic">
+			<img class="interest" id="tennis" src="images/tennis.jpeg" alt="Tennis">
+		</div>
+	
+		<div class="pic">
+			<img class="interest" id="borderland" src="images/borderland.jpeg" alt="Alice in Borderland">
+		</div>
+		
+		<div class="pic">
+			<img class="interest" id="villains" src="images/villains.jpeg" alt="If We Were Villains">
+		</div>
+
+		<div class="pic">
+			<img class="interest" id="willow" src="images/copingmechanism.jpeg" alt="Coping Mechanism">
+		</div>
+
+	</div>
+
+	<div class="main">
+		<img id="thumbnail" src="images/tennis.jpeg" alt="Tennis">
+		<p id="caption">Tennis</p>
+		
+	</div>
+
+	<script>
+
+		var interest = document.querySelectorAll('.interest');
+
+		function changeImage (newSrc, newAlt){
+			document.querySelector('#thumbnail').src = newSrc;
+			console.log(newSrc);
+			document.querySelector('#thumbnail').alt = newAlt;
+			console.log(newAlt);
+			document.querySelector('#caption').innerHTML = newAlt;
+			console.log(newAlt);
+		}
+
+		for(var i = 0; i < interest.length; i++){
+			interest[i].onclick = function(){
+				changeImage (this.src, this.alt);
+			}
+		}
+
+		
+		/*
+		document.querySelector('#tennis').onclick = function(){
+			document.querySelector('#thumbnail').src = 'images/tennis.jpeg';
+			document.querySelector('#thumbnail').alt = 'Tennis';
+			document.getElementById('thumbnail').innerHTML = img.alt;
+		};
+		document.querySelector('#borderland').onclick = function(){
+			document.querySelector('#thumbnail').src = 'images/borderland.jpeg';
+			document.querySelector('#thumbnail').alt = 'Alice in Borderland';
+			document.getElementById('thumbnail').innerHTML = img.alt;
+		};
+
+		document.querySelector('#villains').onclick = function(){
+			document.querySelector('#thumbnail').src = 'images/villains.jpeg';
+			document.querySelector('#thumbnail').alt = 'If We Were Villains';
+			document.getElementById('thumbnail').innerHTML = img.alt;
+		};
+
+		document.querySelector('#willow').onclick = function(){
+			document.querySelector('#thumbnail').src = 'images/copingmechanism.jpeg';
+			document.querySelector('#thumbnail').alt = 'Coping Mechanism';
+			document.getElementById('thumbnail').innerHTML = img.alt;
+		};
+		*/
+		
+		
+
+	</script>
+
+</body>
+</html>

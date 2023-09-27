@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style>
+
+body {
+	background-image: url(street.jpg);
+	background-size: cover;
+	background-repeat: no repeat;
+}
+
+#animation {
+	position: relative;
+	top: 450px;
+	animation: movebiker 7s infinite;
+}
+@keyframes movebiker {
+	0% {left: -200px}
+	100% {left: 1450px}
+}
+#biker {
+	width: 200px;
+	height: auto;
+}
+#bubble {
+	position: relative;
+	border: 1px solid white;
+	background-color: white;
+	width: 200px;
+	height: 50px;
+	border-radius: 20px;
+	text-align: center;
+}
+#bubble::after {
+	content: "";
+ 	position: absolute;
+ 	top: 100%;
+ 	left: 20px;
+ 	width: 0;
+ 	border-top: 20px solid white;
+ 	border-left: 20px solid transparent;
+ 	border-right: 20px solid transparent;
+}
+
+</style>
+</head>
+<body>
+
+<div id="animation">
+<div id="bubble">
+<p>What a beautiful day!</p>
+</div>
+<img id="biker" src="biker.gif" alt="BikerAni">
+</div>
+
+</body>
+</html>

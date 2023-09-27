@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ashley Chen | Final Project</title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro&display=swap" rel="stylesheet">
+<style>
+
+	#nav-wrapper {
+		background-color:#5cdb95;
+	}
+	#nav .active {
+		color:#5cdb95;
+	}
+	#nav a:hover {
+		color:#5cdb95;
+	}
+	#content {
+		background-color:#5cdb95;
+	}
+
+	
+</style>
+</head>
+<body>
+	<div id="nav-wrapper">
+		<div id="nav">
+			<a href="index.html"><strong>Home</strong></a>
+			<a href="application.html"><strong>Application</strong></a>
+			<a href="essays.html"><strong>Essays</strong></a>
+			<a class="active" href="contact.html"><strong>Contact Me</strong></a>
+		</div>
+	</div>
+
+
+	<div id="content">
+		<h2>Have Other Questions?</h2>
+		<form action="confirmation.html">
+			<div class="form-row">
+			<label class="main-label" for="name">Name:</label>
+				<input id="name" type="text">
+			</div>
+
+			<div class="form-row">
+			<label class="main-label" for="email">Email:</label>
+				<input id="email" type="text">
+			</div>
+
+			<div class="form-row">
+			<label class="main-label" for="phone">Phone Number:</label>
+				<input id="phone" type="text">
+			</div>
+
+			<div class="form-row">
+				<label class="main-label">Preferred Method of Contact:</label>
+					<label for="email">
+						<input id="email" type="radio" name="contact" value="email">Email
+					</label>
+					<label for="phone">
+						<input id="phone" type="radio" name="contact" value="phone">Text
+					</label>
+					<label for="none">
+						<input id="none" type="radio" name="contact" value="none">No Preference
+					</label>
+				</div>
+
+			<div class="form-row">
+			<label class="main-label" for="grade">Are you applying to USC?</label>
+				<select id="grade-option">
+					<option value="one">Yes</option>
+					<option value="two">No</option>
+				</select>
+			</div>
+
+			<div class="form-row">
+				<label class="main-label">What kind of questions do you have?</label>
+					<label for="choice">
+						<input id="choice" type="checkbox" name="genre" value="choice">College Choices
+					</label>
+					<label for="major">
+						<input id="major" type="checkbox" name="genre" value="major">Major
+					</label>
+					<label for="experience">
+						<input id="experience" type="checkbox" name="genre" value="experience">Experiences/Achievements
+					</label>
+					<label for="essays">
+						<input id="essays" type="checkbox" name="genre" value="essays">Essays
+					</label>
+				</label>
+			</div>
+
+			<div class="form-row">
+			<label class="main-label" for="questions-comments-concerns">Please type out your questions here.</label>
+				<textarea id="questions-comments-concerns" placeholder="Type Here"></textarea>
+			</div>
+
+			<div class="form-row">
+			<label for="termsandconditions">
+				<input id="agree" type="checkbox" name="termsandconditions" value="agree">I accept the terms and conditions
+			</label>
+			</div>
+
+		<div class="form-row">
+		<button id="submit" type="submit">Submit!</button>
+		<button id="reset" type="reset">Clear</button>
+		</div>
+		</form>
+	</div>
+
+	<div id="footer">
+		<p>&copy; 2022 Ashley Chen. All Rights Reserved.</p>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+#nav-wrapper {
+	height:50px;
+	margin:auto;
+	text-align:right;
+}
+body {
+	background-color:white;
+	margin:auto;
+	font-family: 'Kantumruy Pro', sans-serif;
+	color:white;
+	line-height:40px;
+	font-size:20px;
+}
+#nav a {
+	width: 150px;
+	height: 50px;
+	display: inline-block;
+	text-align: center;
+	line-height: 50px;
+	color: white;
+	text-decoration: none;
+	clear: both;
+	font-size:18px;
+}
+#nav .active {
+	background-color:white;
+}
+#nav a:hover {
+	background-color:white;
+	color:#005266;
+}
+#header {
+	width:1050px;
+	height:400px;
+	margin-left:auto;
+	margin-right:auto;
+	font-size:20px;
+	text-align:left;
+	margin-top: 180px;
+	color:black;
+}
+#text {
+	width:680px;
+	float:left;
+	line-height:30px;
+	padding:20px;
+}
+#laptop {
+	width:320px;
+	height:auto;
+	border:1px solid black;
+	border-radius:50% 20% / 10% 40%;
+	float:left;
+}
+
+#content {
+	padding:20px;
+}
+#introduction {
+	width:800px;
+	margin:auto;
+	text-align:left;
+	color:white;
+	padding:20px;
+	line-height:40px;
+	font-size:20px;
+	border:2px white solid;
+}
+#footer {
+	background-size: cover;
+	background-color: white;
+	text-align: center;
+	padding: 1px;
+	color:black;
+}
+
+.form-row {
+		margin: 20px 0px;
+	}
+	.main-label {
+		width: 35%;
+		float: left;
+	}
+	#questions-comments-concerns {
+		width: 30%;
+	}
+	button {
+		padding: 10px 20px;
+	}
+	#submit {
+		background-color: black;
+		color: white;
+	}

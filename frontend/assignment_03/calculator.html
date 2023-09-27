@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Calculator</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+	<style>
+		#display {
+			font-size: 2em;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<h1 class="col-12 text-center mt-5">JS Calculator</h1>
+		</div> <!-- .row -->
+		<div class="row">
+			<div id="calculator" class="mt-4 col-12 col-md-6 ml-md-auto mr-md-auto col-lg-4">
+				<div class="row">
+					<input type="text" dir="auto" id="display" class="col-12 text-right form-control" value="0">
+				</div> <!-- .row -->
+				<div class="row">
+					<button id="clear" class="col-9 btn btn-lg btn-outline-dark">AC</button>
+					<button id="divide" class="col-3 btn btn-lg btn-outline-dark">/</button>
+				</div> <!-- .row -->
+				<div class="row">
+					<button id="seven" class="col-3 btn btn-lg btn-outline-dark">7</button>
+					<button id="eight" class="col-3 btn btn-lg btn-outline-dark">8</button>
+					<button id="nine" class="col-3 btn btn-lg btn-outline-dark">9</button>
+					<button id="times" class="col-3 btn btn-lg btn-outline-dark">x</button>
+				</div> <!-- .row -->
+				<div class="row">
+					<button id="four" class="col-3 btn btn-lg btn-outline-dark">4</button>
+					<button id="five" class="col-3 btn btn-lg btn-outline-dark">5</button>
+					<button id="six" class="col-3 btn btn-lg btn-outline-dark">6</button>
+					<button id="minus" class="col-3 btn btn-lg btn-outline-dark">-</button>
+				</div> <!-- .row -->
+				<div class="row">
+					<button id="one" class="col-3 btn btn-lg btn-outline-dark">1</button>
+					<button id="two" class="col-3 btn btn-lg btn-outline-dark">2</button>
+					<button id="three" class="col-3 btn btn-lg btn-outline-dark">3</button>
+					<button id="plus" class="col-3 btn btn-lg btn-outline-dark">+</button>
+				</div> <!-- .row -->
+				<div class="row">
+					<button id="zero" class="col-6 btn btn-lg btn-outline-dark">0</button>
+					<button id="dot" class="col-3 btn btn-lg btn-outline-dark">.</button>
+					<button id="equals" class="col-3 btn btn-lg btn-outline-dark">=</button>
+				</div> <!-- .row -->
+			</div> <!-- #calculator -->
+		</div> <!-- .row -->
+	</div> <!-- .container -->
+
+<script>
+
+	// 1. User enters the first number (could be multi-digit),
+	// 2. User presses an operation (addition, subtraction, multiplication, or division),
+	// 3. User enters the second number (could be multi-digit),
+	// 4. User presses = button to see the result.
+	// 5. User presses AC button to clear the display (show 0).
+
+	var firstNum;
+	var operation;
+
+	document.querySelector('#divide').onclick=function(){
+		formInput = document.querySelector('#display');
+		firstNum = formInput.value;
+		firstNum = parseFloat(firstNum);
+		operation = "/";
+		formInput.value = "";
+	}
+
+	document.querySelector('#times').onclick=function(){
+		formInput = document.querySelector('#display');
+		console.log(formInput);
+		firstNum = formInput.value;
+		console.log(firstNum);
+		firstNum = parseFloat(firstNum);
+		console.log(firstNum);
+		operation = "*";
+		console.log(operation);
+		formInput.value = "";
+	}
+
+	document.querySelector('#minus').onclick=function(){
+		formInput = document.querySelector('#display');
+		firstNum = formInput.value;
+		firstNum = parseFloat(firstNum);
+		operation = "-";
+		formInput.value = "";
+	}
+
+	document.querySelector('#plus').onclick=function(){
+		formInput = document.querySelector('#display');
+		firstNum = formInput.value;
+		firstNum = parseFloat(firstNum);
+		operation = "+";
+		formInput.value = "";
+	}
+
+	document.querySelector('#equals').onclick=function(){
+		formField = document.querySelector('#display').value;
+		console.log(formField);
+		secondNum = parseFloat(formField);
+		console.log(formField);
+
+		var result = "Error";
+
+		if (operation == "/"){
+			result = firstNum / secondNum;
+		} else if (operation == "*"){
+			result = firstNum * secondNum;
+			console.log(result);
+		} else if (operation == "-"){
+			result = firstNum - secondNum;
+		} else if (operation == "+"){
+			result = firstNum + secondNum;
+		}
+
+
+		formField.value = result;
+		document.querySelector('#display').value = result;
+	}
+
+	document.querySelector('#clear').onclick=function(){
+		document.querySelector('#display').value = 0;
+	}
+
+
+	document.querySelector('#seven').onclick=function(){
+		seven = document.querySelector('#seven').innerHTML;
+		console.log(seven);
+		integer = document.querySelector('#display').value;
+		console.log(integer);
+		if (integer == 0){
+			number = parseFloat(seven) + 0;
+			console.log(number);
+		} else {
+			number = integer + seven;
+			console.log(number);
+		}
+		
+		document.querySelector('#display').value = number;
+	}
+
+	document.querySelector('#eight').onclick=function(){
+		eight = document.querySelector('#eight').innerHTML;
+		console.log(eight);
+		integer = document.querySelector('#display').value;
+		console.log(integer);
+
+		if (integer == 0){
+			number = parseInt(eight) + 0;
+		} else {
+			number = integer + eight;
+		}
+		console.log(number);
+
+		document.querySelector('#display').value = number;
+	}
+
+	document.querySelector('#nine').onclick=function(){
+		nine = document.querySelector('#nine').innerHTML;
+		console.log(nine);
+		integer = document.querySelector('#display').value;
+		console.log(integer);
+		if (integer == 0){
+			number = parseInt(nine) + 0;
+		} else {
+			number = integer + nine;
+		}
+		console.log(number);
+		document.querySelector('#display').value = number;
+	}
+
+	document.querySelector('#four').onclick=function(){
+		four = document.querySelector('#four').innerHTML;
+		console.log(four);
+		integer = document.querySelector('#display').value;
+		console.log(integer);
+		if (integer == 0){
+			number = parseInt(four) + 0;
+		} else {
+			number = integer + four;
+		}
+		console.log(number);
+		document.querySelector('#display').value = number;
+	}
+
+	document.querySelector('#five').onclick=function(){
+		five = document.querySelector('#five').innerHTML;
+		console.log(five);
+		integer = document.querySelector('#display').value;
+		console.log(integer);
+		if (integer == 0){
+			number = parseInt(five) + 0;
+		} else {
+			number = integer + five;
+		}
+		console.log(number);
+		document.querySelector('#display').value = number;
+	}
+
+	document.querySelector('#six').onclick=function(){
+		six = document.querySelector('#six').innerHTML;
+		console.log(six);
+		integer = document.querySelector('#display').value;
+		console.log(integer);
+		if (integer == 0){
+			number = parseInt(six) + 0;
+		} else {
+			number = integer + six;
+		}
+		console.log(number);
+		document.querySelector('#display').value = number;
+	}
+
+	document.querySelector('#one').onclick=function(){
+		one = document.querySelector('#one').innerHTML;
+		console.log(one);
+		integer = document.querySelector('#display').value;
+		console.log(integer);
+		if (integer == 0){
+			number = parseInt(one) + 0;
+		} else {
+			number = integer + one;
+		}
+		console.log(number);
+		document.querySelector('#display').value = number;
+	}
+
+	document.querySelector('#two').onclick=function(){
+		two = document.querySelector('#two').innerHTML;
+		console.log(two);
+		integer = document.querySelector('#display').value;
+		console.log(integer);
+		if (integer == 0){
+			number = parseInt(two) + 0;
+		} else {
+			number = integer + two;
+		}
+		console.log(number);
+		document.querySelector('#display').value = number;
+	}
+
+	document.querySelector('#three').onclick=function(){
+		three = document.querySelector('#three').innerHTML;
+		console.log(three);
+		integer = document.querySelector('#display').value;
+		console.log(integer);
+		if (integer == 0){
+			number = parseInt(three) + 0;
+		} else {
+			number = integer + three;
+		}
+		console.log(number);
+		document.querySelector('#display').value = number;
+	}
+
+	document.querySelector('#zero').onclick=function(){
+		zero = document.querySelector('#zero').innerHTML;
+		console.log(zero);
+		integer = document.querySelector('#display').value;
+		console.log(integer);
+		number = integer + zero;
+		document.querySelector('#display').value = number;
+	}
+
+	document.querySelector('#dot').onclick=function(){
+		dot = document.querySelector('#dot').innerHTML;
+		console.log(dot);
+		integer = document.querySelector('#display').value;
+		console.log(integer);
+		number = integer + dot;
+		console.log(number);
+		document.querySelector('#display').value = number;
+	}
+
+</script>
+
+</body>
+</html>
